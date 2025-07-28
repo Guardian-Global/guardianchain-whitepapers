@@ -1,0 +1,84 @@
+---
+title: Capsule API Reference & Explorer — Hypervisual Edition
+description: The interactive, AI-explained, and future-proof API docs for accessing, minting, verifying, and searching GuardianChain memory capsules.
+sealedAt: June 1, 2025, 14:45 PM CST
+veritasId: VCW-00019
+author: GuardianChain API Team, DAO & VeritasChain
+lastAudited: 2025-07-28
+version: 3.5
+language: omni
+future_enhancements:
+  - Live endpoint explorer (try queries and mutations in real time)
+  - Multi-format API (REST, GraphQL, WebSocket)
+  - Code snippets and SDKs for all major languages
+  - AI documentation assistant and query builder
+  - Capsule “proof” explorer and NFT verifier
+  - API rate/limit status dashboard (by wallet or key)
+---
+
+<HeroBanner
+  title="Capsule API Reference & Explorer"
+  subtitle="Access, Mint, and Verify Sovereign Memory — Instantly, Securely, and On-Chain"
+  image="/media/capsule-api-hero-bg.jpg"
+  badge={<VeritasBadge id="VCW-00019" />}
+  animation="api"
+  cta={[
+    { label: "OpenAPI Explorer", url: "#reference", style: "primary" },
+    { label: "Try API Live", url: "#playground", style: "secondary" },
+    { label: "Get SDK", url: "#sdks", style: "holo" }
+  ]}
+/>
+
+<UtilityBar>
+  <SectionTOC sticky scrollSpy animation="fade-in" />
+  <QuickActions>
+    <CopyButton text="guardian-global.com/whitepaper/capsule-api" />
+    <ShareMenu platforms={["twitter", "linkedin", "telegram", "farcaster", "email"]} />
+    <PDFExport />
+    <VoiceToggle />
+    <ThemeToggle />
+    <TranslateMenu languages={["en", "es", "zh", "de", "fr", "ar", "hi", "jp"]} />
+    <TextSizeToggle />
+  </QuickActions>
+</UtilityBar>
+
+---
+
+## <span id="reference">API Reference <ApiIcon /></span>
+<OpenAPIExplorer url="https://api.guardian-global.com/v1/capsule/openapi.json" />
+- Full schema, required params, and live try-it-now interface
+
+---
+
+## <span id="playground">API Playground <PlayIcon /></span>
+<CodePlayground
+  samples={[
+    { lang: "JavaScript", code: "// mint a capsule..." },
+    { lang: "Python", code: "# mint a capsule..." },
+    { lang: "Curl", code: "curl -X POST ..." }
+  ]}
+/>
+- Supports REST, GraphQL, and WebSocket
+
+---
+
+## <span id="sdks">SDKs & Helpers <CodeIcon /></span>
+<SDKShowcase
+  sdks={[
+    { lang: "JavaScript", url: "/sdks/capsule-js.zip" },
+    { lang: "Python", url: "/sdks/capsule-py.zip" }
+  ]}
+/>
+
+---
+
+## <span id="faq">FAQ <HelpIcon /></span>
+<FAQ>
+  <Question q="What is a capsule?">A cryptographically sealed memory or data proof, authored and verified on GuardianChain.</Question>
+  <Question q="How do I verify capsule authorship?">Use the `/verify` endpoint or click the NFT in your dashboard.</Question>
+  <Question q="Is the API open to all?">Yes—rate limits apply by wallet or key. Heavy use may require staking.</Question>
+</FAQ>
+
+---
+
+_Last updated: July 2025 | VeritasChain Auth: VCW-00019 | DAO, AI, API Audited_
