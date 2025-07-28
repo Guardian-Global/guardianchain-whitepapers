@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Brand Enhancements */
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; }
+a { transition: color 0.15s; }
+::-webkit-scrollbar { width: 10px; background: #f3f4f6; }
+::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 5px; }
