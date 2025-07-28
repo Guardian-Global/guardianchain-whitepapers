@@ -1,0 +1,119 @@
+---
+title: GuardianChain Validator Onboarding & Node Guide — Hypervisual Edition
+description: Interactive onboarding, live stats, and AR/AI guides for running a node, securing the network, and earning yield in GuardianChain.
+sealedAt: June 1, 2025, 10:00 AM CST
+veritasId: VCW-00005
+author: GuardianChain Validator Council, DAO, & VeritasChain
+lastAudited: 2025-07-28
+version: 3.5
+language: omni
+future_enhancements:
+  - AR validator map and global node explorer
+  - Live onboarding status, reputation, and performance dashboards
+  - AI assistant for troubleshooting, setup, and upgrade help
+  - Wallet connect: personalized onboarding checklist and stats
+  - Community annotation and validator forum overlays
+  - Security audit, uptime, and slashing event notifications
+  - “Proof-of-onboarding” NFT for every node/operator
+---
+
+<HeroBanner
+  title="Validator Onboarding & Node Guide"
+  subtitle="Secure the Future of Memory — Run a Node, Govern the Protocol, Earn Yield"
+  image="/media/validator-hero-bg.jpg"
+  badge={<VeritasBadge id="VCW-00005" />}
+  animation="validators"
+  cta={[
+    { label: "Start Onboarding", url: "#onboarding", style: "primary" },
+    { label: "View Global Nodes", url: "#validator-map", style: "secondary" },
+    { label: "Live Node Stats", url: "#live-stats", style: "holo" }
+  ]}
+/>
+
+<UtilityBar>
+  <SectionTOC sticky scrollSpy animation="fade-in" />
+  <QuickActions>
+    <CopyButton text="guardian-global.com/whitepaper/validators" />
+    <ShareMenu platforms={["twitter", "linkedin", "telegram", "farcaster", "email"]} />
+    <PDFExport />
+    <VoiceToggle />
+    <ThemeToggle />
+    <TranslateMenu languages={["en", "es", "zh", "de", "fr", "ar", "hi", "jp"]} />
+    <TextSizeToggle />
+  </QuickActions>
+</UtilityBar>
+
+<LiveStats type="validators" position="banner" />
+
+---
+
+## <span id="onboarding">Onboarding Overview <InfoIcon /></span>
+<Callout type="impact" icon="🛡️">
+  <b>Become a validator—protect digital truth, earn GTT, and help shape protocol upgrades.</b>
+</Callout>
+
+<AIExplain section="onboarding" />
+
+---
+
+## <span id="requirements">Hardware, Security & Requirements <HardwareIcon /></span>
+- Minimum: 8-core CPU, 32GB RAM, 2TB SSD, 1 Gbps network
+- Hardened Linux or BSD preferred
+- Dedicated security (TPM/HSM module recommended)
+- Redundancy and uptime: 99.9%+ to avoid slashing
+
+<Callout type="pro" icon="🔒">
+  <b>Tip:</b> Validator performance is public and yields scale with uptime, availability, and proof quality.
+</Callout>
+
+---
+
+## <span id="setup">Setup Guide <SetupIcon /></span>
+<SetupWizard steps={[
+  "Install GuardianChain Validator CLI or Docker image",
+  "Initialize wallet and bond GTT",
+  "Run testnet node for minimum period (recommended: 14 days)",
+  "Pass onboarding KYC/AML and reputation checks",
+  "Activate on mainnet and monitor dashboard"
+]} />
+
+- Video & AR guide: <VideoPlayer src="/media/validator-setup.mp4" />
+- Wallet connect for automated onboarding and status updates
+
+---
+
+## <span id="validator-map">Global Node Map <GlobeIcon /></span>
+<ValidatorMap interactive arMode />
+- Click any region for live stats, performance history, or validator chat
+
+---
+
+## <span id="live-stats">Live Node Stats & Rewards <StatsIcon /></span>
+<LiveStats type="validator-performance" />
+- Real-time reward calculation
+- Reputation, uptime, and proof logs
+
+---
+
+## <span id="security">Security, Audit, and Slashing <ShieldIcon /></span>
+- All nodes monitored by AI & DAO for malicious activity or downtime
+- Slashing/banning events are time-stamped, NFT-minted, and appealable via on-chain arbitration
+- Security audit logs downloadable at any time
+
+---
+
+## <span id="faq">FAQ <HelpIcon /></span>
+<FAQ>
+  <Question q="What if I miss uptime?">Some rewards may be lost, and repeat violations can lead to slashing or ejection (appealable).</Question>
+  <Question q="Can I operate multiple nodes?">Yes, but sybil resistance and unique reputation are enforced.</Question>
+  <Question q="How do I get help?">Use the AI assistant, join validator chat, or open a DAO proposal.</Question>
+</FAQ>
+
+---
+
+## <span id="audit">Audit Trail & Proof-of-Onboarding NFT <AuditIcon /></span>
+- All onboarding, upgrades, and rewards versioned and NFT-minted
+
+---
+
+_Last updated: July 2025 | VeritasChain Auth: VCW-00005 | DAO, AI, and Community Audited_
