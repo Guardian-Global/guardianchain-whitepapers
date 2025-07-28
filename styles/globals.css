@@ -1,0 +1,10 @@
+/* /styles/globals.css */
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  color: #1a202c;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3 { font-family: 'Inter', sans-serif; }
+a { transition: color 0.2s; }
