@@ -1,22 +1,50 @@
 // components/SectionNav.tsx
-import Link from "next/link";
-export default function SectionNav() {
-  const links = [
-    { href: "/whitepaper/guardianchain-protocol", label: "Protocol" },
-    { href: "/whitepaper/gtt-tokenomics", label: "Tokenomics" },
-    { href: "/whitepaper/yield-engine", label: "Yield Doctrine" },
-    { href: "/whitepaper/governance", label: "Governance" },
-    { href: "/whitepaper/compliance", label: "Compliance" },
-    { href: "/press", label: "Press & Media" }
-  ]
+'use client';
+
+import { useEffect, useState } from 'react';
+import clsx from 'clsx';
+
+interface TOCItem {
+  label: string;
+  href: string;
+}
+
+export default function SectionNav({ toc }: { toc: TOCItem[] }) {
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 150;
+      let current = null;
+      for (const section of toc) {
+        const el = document.querySelector(section.href);
+        if (el && el instanceof HTMLElement && el.offsetTop <= scrollPosition) {
+          current = section.href;
+        }
+      }
+      setActiveId(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [toc]);
+
   return (
-    <nav className="flex flex-wrap justify-center gap-4">
-      {links.map(link =>
-        <Link key={link.href} href={link.href}
-          className="px-4 py-2 rounded border border-indigo-200 dark:border-yellow-400 font-medium bg-white/60 dark:bg-black/60 hover:bg-indigo-100 dark:hover:bg-yellow-900 transition">
-          {link.label}
-        </Link>
-      )}
+    <nav className="border-l-2 border-gray-300 dark:border-gray-700 pl-4 text-sm space-y-2">
+      {toc.map((item) => (
+        <a
+          key={item.href}
+          href={item.href}
+          className={clsx(
+            'block hover:text-indigo-600 transition-colors',
+            activeId === item.href ? 'text-indigo-600 font-bold' : 'text-gray-700 dark:text-gray-300'
+          )}
+        >
+          {item.label}
+        </a>
+      ))}
     </nav>
-  )
+  );
 }
