@@ -1,0 +1,82 @@
+---
+title: FAQ & Support — Hypervisual Edition
+description: Massive, AI-augmented, and auto-updating FAQ with live support, onboarding, compliance, and developer knowledge base.
+sealedAt: June 1, 2025, 13:15 PM CST
+veritasId: VCW-00010
+author: GuardianChain Support, DAO & VeritasChain
+lastAudited: 2025-07-28
+version: 3.5
+language: omni
+future_enhancements:
+  - AI-powered “Ask Anything” chatbot with auto-suggested links and docs
+  - Dynamic, filterable FAQ by user role (user, dev, institution, DAO)
+  - Live onboarding checklist for new users
+  - “Did this help?” feedback, upvotes, and community edits
+  - Voice/AR navigation and accessibility overlays
+  - Multilingual instant translation and sign language video
+  - Bug report and “human support” escalation
+---
+
+<HeroBanner
+  title="FAQ & Support"
+  subtitle="Your Questions — Answered by AI, DAO, and Community"
+  image="/media/faq-hero-bg.jpg"
+  badge={<VeritasBadge id="VCW-00010" />}
+  animation="faq"
+  cta={[
+    { label: "Ask AI", url: "#ai-chat", style: "primary" },
+    { label: "Browse FAQ", url: "#faq-list", style: "secondary" },
+    { label: "Get Human Help", url: "#support", style: "holo" }
+  ]}
+/>
+
+<UtilityBar>
+  <SectionTOC sticky scrollSpy animation="fade-in" />
+  <QuickActions>
+    <CopyButton text="guardian-global.com/whitepaper/faq" />
+    <ShareMenu platforms={["twitter", "linkedin", "telegram", "farcaster", "email"]} />
+    <PDFExport />
+    <VoiceToggle />
+    <ThemeToggle />
+    <TranslateMenu languages={["en", "es", "zh", "de", "fr", "ar", "hi", "jp"]} />
+    <TextSizeToggle />
+  </QuickActions>
+</UtilityBar>
+
+---
+
+## <span id="ai-chat">Ask AI — Interactive FAQ <AIIcon /></span>
+<AIChatbot />
+- Instantly answers questions, links docs, and escalates to human support if needed
+
+---
+
+## <span id="faq-list">Frequently Asked Questions <ListIcon /></span>
+<FAQ>
+  <Question q="What is GuardianChain?">A protocol for sovereign digital memory and truth—see the Protocol Whitepaper.</Question>
+  <Question q="How do I mint a capsule?">Connect your wallet and follow the onboarding steps. See Validator/Onboarding Guide.</Question>
+  <Question q="What is GTT?">The native, fixed-supply token for protocol utility, rewards, and governance. See Tokenomics.</Question>
+  <Question q="How do I participate in governance?">Hold GTT, connect, and vote/propose via the DAO portal.</Question>
+  <Question q="How do I run a validator?">See Validator Guide or try the onboarding wizard.</Question>
+  <Question q="How do I get technical support?">Ask the AI, join community chat, or escalate to the DAO support team.</Question>
+  <Question q="How can I verify compliance or audit status?">All docs, audits, and legal opinions are downloadable from Compliance page.</Question>
+  <Question q="Where can I find your API or SDKs?">See Developer Portal for live docs, code samples, and OpenAPI explorer.</Question>
+  <Question q="How can I report bugs or security issues?">Submit via the Security Bounty section or open a DAO proposal.</Question>
+  <Question q="Can I help translate or improve docs?">Yes, every page supports DAO/community annotation, translation, and upvoting.</Question>
+</FAQ>
+
+---
+
+## <span id="support">Get Human Support <HelpIcon /></span>
+<SupportRequest />
+- Open ticket, join live chat, or get phone/video support
+- Human escalation for legal/compliance issues
+
+---
+
+## <span id="feedback">Feedback & Community Upvotes <UpvoteIcon /></span>
+- Vote on answers, suggest edits, or annotate sections for the DAO to review
+
+---
+
+_Last updated: July 2025 | VeritasChain Auth: VCW-00010 | DAO, AI, Community Moderated_
