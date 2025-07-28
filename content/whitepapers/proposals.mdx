@@ -1,0 +1,62 @@
+---
+title: Proposals, Votes & Governance Archive — Hypervisual Edition
+description: Every DAO proposal, vote, and upgrade—filterable, AI-explained, replayable, and NFT-certified for full protocol transparency.
+sealedAt: June 1, 2025, 14:35 PM CST
+veritasId: VCW-00018
+author: GuardianChain Governance Council, DAO & VeritasChain
+lastAudited: 2025-07-28
+version: 3.5
+language: omni
+future_enhancements:
+  - AI summary and impact analysis for every proposal/vote
+  - Instant replay of every governance decision and outcome
+  - Time-travel voting dashboard and upvote/annotation overlays
+  - Export, print, or NFT-mint any proposal or result
+---
+
+<HeroBanner
+  title="Proposals, Votes & Governance Archive"
+  subtitle="All Upgrades, Decisions, and DAO Votes — Public, Verifiable, and Explorable"
+  image="/media/proposals-hero-bg.jpg"
+  badge={<VeritasBadge id="VCW-00018" />}
+  animation="proposals"
+  cta={[
+    { label: "Browse Proposals", url: "#proposal-list", style: "primary" },
+    { label: "Submit Proposal", url: "#submit", style: "secondary" },
+    { label: "Vote Dashboard", url: "#dashboard", style: "holo" }
+  ]}
+/>
+
+<UtilityBar>
+  <SectionTOC sticky scrollSpy animation="fade-in" />
+  <QuickActions>
+    <CopyButton text="guardian-global.com/whitepaper/proposals" />
+    <ShareMenu platforms={["twitter", "linkedin", "telegram", "farcaster", "email"]} />
+    <PDFExport />
+    <VoiceToggle />
+    <ThemeToggle />
+    <TranslateMenu languages={["en", "es", "zh", "de", "fr", "ar", "hi", "jp"]} />
+    <TextSizeToggle />
+  </QuickActions>
+</UtilityBar>
+
+---
+
+## <span id="proposal-list">All Proposals & Votes <VoteIcon /></span>
+<ProposalArchive />
+- Search, filter, or replay any DAO vote, outcome, or impact
+
+---
+
+## <span id="submit">Submit New Proposal <SubmitIcon /></span>
+<ProposalForm />
+- Draft, preview, and submit new protocol or governance upgrades
+
+---
+
+## <span id="dashboard">Vote Dashboard & Timeline <TimelineIcon /></span>
+<VoteDashboard />
+
+---
+
+_Last updated: July 2025 | VeritasChain Auth: VCW-00018 | DAO, AI, Governance Audited_
