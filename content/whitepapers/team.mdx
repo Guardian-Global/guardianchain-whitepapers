@@ -1,0 +1,73 @@
+---
+title: Team, Advisors & DAO Contributors — Hypervisual Edition
+description: Public, live-updating bios and credentials for all key protocol contributors, with proof-of-authorship and DAO/web-of-trust overlays.
+sealedAt: June 1, 2025, 13:30 PM CST
+veritasId: VCW-00011
+author: GuardianChain DAO & VeritasChain
+lastAudited: 2025-07-28
+version: 3.5
+language: omni
+future_enhancements:
+  - DAO-ratified contributor bios, badge overlays, and on-chain verification
+  - “Proof of Human” and SBT/identity for key contributors
+  - Team/DAO upvote, annotation, and contact overlays
+  - Dynamic “web of trust” and reputation scorecards
+  - “Meet the Team” AR/VR rooms
+  - Public contact forms and transparency ratings
+---
+
+<HeroBanner
+  title="Team, Advisors & DAO Contributors"
+  subtitle="Publicly Verified — DAO-Ratified — Web-of-Trust Certified"
+  image="/media/team-hero-bg.jpg"
+  badge={<VeritasBadge id="VCW-00011" />}
+  animation="team"
+  cta={[
+    { label: "View Full Team", url: "#bios", style: "primary" },
+    { label: "DAO Contributors", url: "#dao", style: "secondary" },
+    { label: "Contact", url: "#contact", style: "holo" }
+  ]}
+/>
+
+<UtilityBar>
+  <SectionTOC sticky scrollSpy animation="fade-in" />
+  <QuickActions>
+    <CopyButton text="guardian-global.com/whitepaper/team" />
+    <ShareMenu platforms={["twitter", "linkedin", "telegram", "farcaster", "email"]} />
+    <PDFExport />
+    <VoiceToggle />
+    <ThemeToggle />
+    <TranslateMenu languages={["en", "es", "zh", "de", "fr", "ar", "hi", "jp"]} />
+    <TextSizeToggle />
+  </QuickActions>
+</UtilityBar>
+
+---
+
+## <span id="bios">Public Team & Advisor Bios <ProfileIcon /></span>
+<ProfileGallery
+  people={[
+    { name: "Ava Carter", title: "Founder & Chief Architect", bio: "Decentralized systems pioneer, ex-Ethereum Foundation, MIT PhD.", badges: ["Founder", "DAO Delegate", "SBT"] },
+    { name: "Jonas Lee", title: "Lead Protocol Engineer", bio: "Cryptography expert, zk-proofs, ex-Zcash, OpenZeppelin contributor.", badges: ["Core Dev", "Security", "KYC"] },
+    { name: "Mei Nakamura", title: "Compliance & Policy", bio: "Former G20 advisor, digital law author, privacy rights advocate.", badges: ["Legal", "DAO", "KYC"] },
+    // More team/advisors here
+  ]}
+/>
+- View “proof-of-human” badge and on-chain authorship for each contributor
+
+---
+
+## <span id="dao">DAO & Community Contributors <DAOBadge /></span>
+<DAOBios />
+- Live, DAO-ratified list of major contributors, delegates, and upvoted community builders
+- “Web of Trust” overlays and role-based navigation
+
+---
+
+## <span id="contact">Contact & Transparency <ContactIcon /></span>
+- DAO-verified contact forms and public request process
+- Upvote, annotate, or rate transparency for every profile
+
+---
+
+_Last updated: July 2025 | VeritasChain Auth: VCW-00011 | DAO, Web-of-Trust Certified_
