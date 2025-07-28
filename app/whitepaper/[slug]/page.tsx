@@ -1,22 +1,24 @@
-// app/whitepaper/[slug]/page.tsx
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { notFound } from 'next/navigation';
 import WhitepaperLayout from '../../../components/WhitepaperLayout';
-import { MDXRemote } from 'next-mdx-remote/rsc'; // rsc = React Server Components
+import { MDXRemote } from 'next-mdx-remote/rsc';
 
 const whitepaperDir = path.join(process.cwd(), 'content', 'whitepapers');
 
 export async function generateStaticParams() {
-  // Reads all .mdx in /content/whitepapers for prebuilding static routes
   return fs
     .readdirSync(whitepaperDir)
     .filter(f => f.endsWith('.mdx'))
     .map(f => ({ slug: f.replace('.mdx', '') }));
 }
 
-export default async function WhitepaperPage({ params }) {
+interface PageProps {
+  params: { slug: string };
+}
+
+export default async function WhitepaperPage({ params }: PageProps) {
   const slug = params.slug;
   const filePath = path.join(whitepaperDir, `${slug}.mdx`);
   if (!fs.existsSync(filePath)) return notFound();
