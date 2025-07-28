@@ -1,17 +1,36 @@
 // components/Footer.tsx
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-t from-slate-900 to-white dark:from-black dark:to-gray-900 py-8 mt-16 border-t border-gray-200 dark:border-slate-700">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div>
-          <span className="text-xl font-bold text-indigo-800 dark:text-yellow-400">GuardianChain</span> <span className="text-gray-400">© {new Date().getFullYear()}</span>
-          <span className="ml-2 text-sm text-gray-400">Sovereign Memory Infrastructure</span>
-        </div>
-        <div className="flex gap-4">
-          <a href="https://twitter.com/GuardianChain" target="_blank" className="hover:underline">Twitter</a>
-          <a href="mailto:press@guardian-global.com" className="hover:underline">Press</a>
-          <a href="/press" className="hover:underline">Media Kit</a>
-          <a href="https://replit.com/@your-replit-username/guardianchain-app" target="_blank" className="hover:underline text-indigo-700 dark:text-yellow-400">Main App</a>
+    <footer className="bg-[#0B0F1A] border-t border-[#1F2739] text-white/80 py-8 px-4 text-sm mt-16">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Logo and Brand */}
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/media/logo.png"
+            alt="GUARDIANCHAIN Logo"
+            width={32}
+            height={32}
+          />
+          <span className="text-sm font-semibold uppercase tracking-wide">
+            <span className="text-[#06FC99]">GUARDIAN</span>
+            <span className="text-[#7F5DF4]">CHAIN</span>
+          </span>
+        </Link>
+
+        {/* Copyright and Links */}
+        <div className="flex flex-col md:items-end md:text-right gap-2">
+          <p className="text-xs text-white/60">
+            &copy; {new Date().getFullYear()} GUARDIANCHAIN. Sovereign Memory Infrastructure
+          </p>
+          <div className="flex gap-4 text-xs text-white/70">
+            <a href="https://twitter.com/GuardianChain" target="_blank" rel="noopener noreferrer" className="hover:text-white">Twitter</a>
+            <a href="mailto:press@guardian-global.com" className="hover:text-white">Press</a>
+            <a href="/press" className="hover:text-white">Media Kit</a>
+            <a href="https://replit.com/@your-replit-username/guardianchain-app" target="_blank" rel="noopener noreferrer" className="hover:text-[#06FC99]">Main App</a>
+          </div>
         </div>
       </div>
     </footer>
